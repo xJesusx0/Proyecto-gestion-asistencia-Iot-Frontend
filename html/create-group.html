@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+    <!-- Axios and other scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/request.js"></script>
+    <script src="../js/getUserData.js"></script>
+    <script src="../js/config/config.js"></script>
+    <script src="../js/config/routes.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/validarRoles.js"></script>
+    <script src="../js/administrators/create-group.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a href="administrators.html" class="nav-item nav-link btn btn-outline-primary">Inicio</a>
+                    <a href="users-list.html" class="nav-item nav-link btn btn-outline-primary">Ver lista de usuarios</a>
+                </div>
+                <button onclick="logout()" class="btn btn-primary ml-3">Cerrar sesión</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-light">
+                        <h2 class="mb-0">Crear Grupo</h2>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="group-id" class="form-label">ID del Grupo</label>
+                                <input type="text" class="form-control" id="group-id" placeholder="Ingrese el ID del Grupo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="period" class="form-label">Periodo</label>
+                                <input type="text" class="form-control" id="period" placeholder="Ingrese el Periodo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="weekday" class="form-label">Día de la Semana</label>
+                                <select class="form-select" id="weekday" name="weekday">
+                                    <option disabled selected value="">Selecciona un dia</option>
+                                    <option value="lunes">Lunes</option>
+                                    <option value="martes">Martes</option>
+                                    <option value="miércoles">Miércoles</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                    <option value="sábado">Sábado</option>
+                                    <option value="domingo">Domingo</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="teachers" class="form-label">Profesor</label>
+                                <select class="form-select" id="teachers" name="teachers">
+                                    <option disabled selected value="">Selecciona un profesor</option>
+                                    <!-- Opciones generadas dinámicamente -->
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="modules" class="form-label">Módulo</label>
+                                <select class="form-select" id="modules" name="modules">
+                                    <option disabled selected value="">Selecciona un módulo</option>
+                                    <!-- Opciones generadas dinámicamente -->
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="classrooms" class="form-label">Salón</label>
+                                <select class="form-select" id="classrooms" name="classrooms">
+                                    <option disabled selected value="">Selecciona un salón</option>
+                                    <!-- Opciones generadas dinámicamente -->
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="start-time" class="form-label">Hora de Inicio</label>
+                                <input type="time" class="form-control" id="start-time" name="start-time">
+                            </div>
+                            <div class="mb-3">
+                                <label for="end-time" class="form-label">Hora de Finalización</label>
+                                <input type="time" class="form-control" id="end-time" name="end-time">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="createGroup()">Crear Grupo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo-container text-center">
+                        <img src="../img/logoiub.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="names-container">
+                        <h3>Jesus Perea</h3>
+                        <h3>Alberto Perez</h3>
+                        <h3>Daniel Dussan</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-container">
+                        <h3>Contacto: </h3>
+                        <h3>Bienestar@unibarranquilla.edu.co</h3>
+                        <h3>Teléfono: +123456789</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

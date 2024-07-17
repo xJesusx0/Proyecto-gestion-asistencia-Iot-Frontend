@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar estudiantes por csv</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/request.js"></script>
+    <script src="../js/getUserData.js"></script>
+    <script src="../js/config/config.js"></script>
+    <script src="../js/config/routes.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/validarRoles.js"></script>
+    <script src="../js/administrators/upload-and-register.js"></script> <!-- Aquí vinculas el script -->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
+            </a>
+            <button onclick="logout()" class="btn btn-primary ml-auto">Cerrar sesión</button>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a href="administrators.html" class="nav-item nav-link text-primary">Inicio</a>
+                    <a href="users-list.html" class="nav-item nav-link text-primary">Ver lista de usuarios</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="display-4">
+                            Agregar un archivo csv de usuarios
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <h1 id="name-container">
+                            Nombre:
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Subir Archivo CSV</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="formulario" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="file">Selecciona un archivo CSV:</label>
+                                <input type="file" class="form-control-file" id="file" name="file">
+
+                                <select name="tables" id="tables">
+                                    <option value="usuarios">usuarios</option>
+                                    <option value="estudiante">estudiantes</option>
+                                    <option value="profesor">profesores</option>
+                                </select>
+                            </div>
+                            <br>
+                            <input type="button" class="btn btn-primary" value="Subir archivo" onclick="sendFile()" >
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

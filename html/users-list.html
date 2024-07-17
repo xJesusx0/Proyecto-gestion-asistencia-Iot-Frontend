@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de usuarios</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/request.js"></script>
+    <script src="../js/getUserData.js"></script>
+    <script src="../js/config/config.js"></script>
+    <script src="../js/config/routes.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/validarRoles.js"></script>
+    <script src="../js/administrators/users-list.js"></script>
+
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <style>
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+        .navbar-nav .nav-link {
+            margin-right: 15px;
+        }
+        .table-container {
+            margin-top: 30px;
+        }
+        .table thead {
+            background-color: #343a40;
+            color: #fff;
+        }
+        .table-responsive {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
+            </a>
+            <button onclick="logout()" class="btn btn-primary ml-auto">Cerrar sesión</button>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a href="administrators.html" class="nav-item nav-link btn btn-outline-primary">Inicio</a>
+                    <a href="upload-and-register.html" class="nav-item nav-link btn btn-outline-primary">Agregar usuarios via archivo CSV</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container table-container">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover" id="users-table">
+                <thead class="bg-dark text-light">
+                    <tr>
+                        <th>Identificación</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Correo</th>
+                        <th>Número telefónico</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Aqui van las filas generadas-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

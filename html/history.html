@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/getUserData.js"></script>
+    <script src="../js/routes.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/validarRoles.js"></script>
+    <script src="../js/history.js"></script>
+
+    <link rel="stylesheet" href="../css/students.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/administrators.css">
+
+
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav>
+        <div>
+            <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
+        </div>
+
+        <div class="menuDesplegable">
+            <button id="btnDesplegable" class="dropbtn"></button>
+            <div class="dropdown-content">
+                <a onclick="logout()">Cerrar sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="welcome">
+        <div class="welcomeData">
+            <h1>Historial de asistencias</h1>
+            <h2 id="student-name">Estudiante: </h2>
+            <a href="students.html">
+                <h4>Voler a la pagina principal</h4>
+            </a>
+
+        </div>
+        <div class="info-container">
+            <h4 id="program-container"></h4>
+            <h4 id="period-container"></h4>
+
+        </div>
+    </div>
+
+    <div class="containerTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Grupo</th>
+                    <th>Materia</th>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Aquí se generan las demás filas -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<footer class="footer">
+    <div class="logo-container">
+        <img src="../img/logoiub.png" alt="Logo">
+    </div>
+    <div class="names-container">
+        <h3>Jesus Perea</h3>
+        <h3>Alberto Perez</h3>
+        <h3>Daniel Dussan</h3>
+    </div>
+    <div class="contact-container">
+        <h3>Contacto: </h3>
+        <h3>Bienestar@unibarranquilla.edu.co</h3>
+        <h3>Teléfono: +123456789</h3>
+    </div>
+</footer>
+
+</html>

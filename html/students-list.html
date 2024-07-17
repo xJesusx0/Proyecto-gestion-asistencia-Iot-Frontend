@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de estudiantes</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/getUserData.js"></script>
+    <script src="../js/routes.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/validarRoles.js"></script>
+    <script src="../js/cleanStorage.js"></script>
+    <script src="../js/studentsList.js"></script>
+
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/administrators.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/students.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
+        </div>
+        <div class="menuDesplegable">
+            <button id="btnDesplegable" class="dropbtn"></button>
+            <div class="dropdown-content">
+                <a onclick="logout()">Cerrar sesión</a>
+            </div>
+        </div>
+    </nav>
+    <div class="welcome">
+        <div>
+            <!-- <h2 id="welcomeUser">Bienvenido,</h2> -->
+            <h1> Lista de estudiantes</h1>
+            <h3 id="course-container">Materia: </h3>
+            <h3 id="group-container">Grupo: </h3>
+            <a href="teachers.html">
+                <h4>Voler a la pagina principal</h4>
+            </a>
+        </div>
+
+    </div>
+    <div class="containerTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Inasistencias</th>
+                    <th>Clases totales</th>
+                </tr>
+            </thead>
+            <tbody id="usersTableBody">
+                <!-- Aquí se generan las demás filas -->
+            </tbody>
+        </table>
+    </div>
+    <footer class="footer">
+        <div class="logo-container">
+            <img src="../img/logoiub.png" alt="Logo">
+        </div>
+        <div class="names-container">
+            <h3>Jesus Perea</h3>
+            <h3>Alberto Perez</h3>
+            <h3>Daniel Dussan</h3>
+        </div>
+        <div class="contact-container">
+            <h3>Contacto: </h3>
+            <h3>Bienestar@unibarranquilla.edu.co</h3>
+            <h3>Teléfono: +123456789</h3>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+</html>

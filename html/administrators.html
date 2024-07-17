@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/request.js"></script>
+    <script src="../js/getUserData.js"></script>
+    <script src="../js/config/config.js"></script>
+    <script src="../js/config/routes.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/validarRoles.js"></script>
+    <script src="../js/administrators/administrators.js"></script>
+
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <style>
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+        .navbar-nav .nav-link {
+            margin-right: 15px;
+        }
+        .footer {
+            padding: 20px 0;
+        }
+        .logo-container img {
+            max-height: 80px;
+            width: auto;
+        }
+        .names-container h3, .contact-container h3 {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+        .contact-container h3:first-child {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
+            </a>
+            <button onclick="logout()" class="btn btn-primary ml-auto">Cerrar sesión</button>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a href="upload-and-register.html" class="nav-item nav-link btn btn-outline-primary">Agregar usuarios via archivo CSV</a>
+                    <a href="users-list.html" class="nav-item nav-link btn btn-outline-primary">Ver lista de usuarios</a>
+                    <a href="create-group.html" class="nav-item nav-link btn btn-outline-primary">Crear un grupo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-center mt-4">
+            <h2 id="welcome">Bienvenido,</h2>
+        </div>
+    </div>
+
+    <footer class="footer mt-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="logo-container">
+                        <img src="../img/logoiub.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="names-container">
+                        <h3>Jesus Perea</h3>
+                        <h3>Alberto Perez</h3>
+                        <h3>Daniel Dussan</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="contact-container">
+                        <h3>Contacto:</h3>
+                        <h3>Bienestar@unibarranquilla.edu.co</h3>
+                        <h3>Teléfono: +123456789</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

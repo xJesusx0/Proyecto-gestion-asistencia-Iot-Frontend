@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de acceso</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/config/config.js"></script>
+    <script src="../js/config/routes.js"></script>
+    <script src="../js/request.js"></script>
+    <script src="../js/login.js"></script>
+
+</head>
+
+<body>
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Escoge tu rol</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="roles-list">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="confirmRole()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar bg-body-secondary">
+        <div class="container-fluid">
+            <img src="../img/logoiubLetras.png" alt="" class=" w-25 h-25" style="width:150px; height:40px;">
+            <a href="../index.html"> <button class="btn btn-primary px-4 py-2" type="submit">Regresar</button> </a>
+        </div>
+    </nav>
+
+
+    <div class="d-flex ">
+        <div class="mt-5 shadow p-3 mb-5 bg-body rounded py-5 px-5  mx-auto">
+
+            <div class="mb-5">
+                <h3>¡Ingresa a tu cuenta!</h3>
+            </div>
+
+
+            <form id="login-form" class="formulario" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="form_email" id="username"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label" style="width: 200px;">Password</label>
+                    <input type="password" class="form-control" name="form_passw" id="password">
+                </div>
+
+                <input type="button" class="btn btn-primary ms-4 " name="btn_iniciar" style="width: 200px;"
+                    value="Iniciar Sesion" onclick="validarLogin()">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

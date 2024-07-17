@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de usuarios</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/request.js"></script>
+    <script src="../js/getUserData.js"></script>
+    <script src="../js/config/config.js"></script>
+    <script src="../js/config/routes.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/validarRoles.js"></script>
+    <script src="../js/administrators/user-info.js"></script>
+
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
+            </a>
+            <button onclick="logout()" class="btn btn-primary ml-auto">Cerrar sesión</button>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a href="administrators.html" class="nav-item nav-link text-primary">Inicio</a>
+                    <a href="upload-and-register.html" class="nav-item nav-link text-primary">Agregar usuarios via archivo CSV</a>
+                    <a href="users-list.html" class="nav-item nav-link text-primary">Ver lista de usuarios</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</body>

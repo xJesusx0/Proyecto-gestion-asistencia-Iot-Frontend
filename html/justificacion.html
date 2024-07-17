@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justifica tus inasistencias</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/getUserData.js"></script>
+    <script src="../js/routes.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/validarLogin.js"></script>
+    <script src="../js/validarRoles.js"></script>
+    <script src="../js/justification.js"></script>
+
+    <link rel="stylesheet" href="../css/students.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/justificacion.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
+        </div>
+        <div class="menuDesplegable">
+            <button id="btnDesplegable" class="dropbtn"></button>
+            <div class="dropdown-content">
+                <a onclick="logout()">Cerrar sesión</a>
+            </div>
+        </div>
+    </nav>
+    <div class="welcome">
+        <div>
+            <!-- <h2 id="welcomeUser">Bienvenido,</h2> -->
+            <h1> Sube Tus Justificaciones</h1>
+            <h3 id="program-container">Programa: </h3>
+            <h3 id="period-container">Grupo: </h3>
+            <a href="students.html">
+                <h4>Voler a la pagina principal</h4>
+            </a>
+        </div>
+
+
+        <div class="contenedor-login">
+            <div class="contenido-formulario">
+                <form class="formulario">
+                    <div>
+                        <h2>Formulario de Inasistencia</h2>
+                    </div>
+                    <!-- Motivo de Inasistencia -->
+                    <label for="motivo">Motivo de Inasistencia:</label><br>
+                    <textarea id="motivo" name="motivo" rows="4" cols="50"
+                        placeholder="Explique el motivo de su inasistencia..."></textarea><br>
+
+                    <!-- inasistencia -->
+                    <label for="inasistencia">Inasistencia:</label><br>
+                    <select id="inasistencia" name="inasistencia" class="select-group">
+                        <option value="">Seleccione la inasistencia</option>
+                        <!-- Aqui van las inasistencias -->
+                    </select><br>
+
+                    <!-- Tipo de Inasistencia -->
+                    <label for="tipo">Tipo de Inasistencia:</label><br>
+                    <select id="tipo" name="tipo" class="select-group">
+                        <option value="">Seleccione el tipo de inasistencia</option>
+                        <option value="accidente">Accidente</option>
+                        <option value="muerte_familiar">Muerte de un familiar</option>
+                        <option value="cita_medica">Cita médica</option>
+                        <option value="otra">Otra</option>
+                    </select><br>
+
+                    <label for="soporte">Subir Soporte de Inasistencia:</label><br>
+                    <input type="file" id="soporte" name="soporte"><br>
+
+                    <!-- Botón de Enviar -->
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="logo-container">
+            <img src="../img/logoiub.png" alt="Logo">
+        </div>
+        <div class="names-container">
+            <h3>Jesus Perea</h3>
+            <h3>Alberto Perez</h3>
+            <h3>Daniel Dussan</h3>
+        </div>
+        <div class="contact-container">
+            <h3>Contacto: </h3>
+            <h3>Bienestar@unibarranquilla.edu.co</h3>
+            <h3>Teléfono: +123456789</h3>
+        </div>
+    </footer>
+</body>
+
+</html>
