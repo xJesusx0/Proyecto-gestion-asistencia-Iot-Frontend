@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/request.js"></script>
     <script src="../js/getUserData.js"></script>
@@ -14,6 +15,7 @@
     <script src="../js/logout.js"></script>
     <script src="../js/validarLogin.js"></script>
     <script src="../js/validarRoles.js"></script>
+    <script src="../js/chart.js"></script>
     <script src="../js/administrators/administrators.js"></script>
 
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
@@ -70,6 +72,12 @@
         <div class="text-center mt-4">
             <h2 id="welcome">Bienvenido,</h2>
         </div>
+    </div>
+    <div class="container w-50 h-50">
+        <div id="total-users">
+            Total de usuarios: 
+        </div>
+        <canvas id="users-roles"></canvas>
     </div>
 
     <footer class="footer mt-4 bg-light">
