@@ -1,4 +1,4 @@
-fetch('../../json/web-routes.json')
+fetch('../json/web-routes.json')
 .then(response => {
     return response.json();
 })

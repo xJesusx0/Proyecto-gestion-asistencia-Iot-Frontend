@@ -27,17 +27,17 @@ const confirmRole = () => {
 
   const url = `${config.baseUrl}/auth/set-role`
   const data = {
-    'role':selectedRole
+    'role': selectedRole
   }
-  request('POST',url,data)
-  .then(response => {
-    if (response['error']){
-      alert('Ha ocurrido un error al iniciar sesion');
-      return;
-    }
-  alert(`Bienvenido de nuevo, ${userData.names} 👋`);
-  window.location.href = window.routes[selectedRole][0];
-  })
+  request('POST', url, data)
+    .then(response => {
+      if (response['error']) {
+        alert('Ha ocurrido un error al iniciar sesion');
+        return;
+      }
+      alert(`Bienvenido de nuevo, ${userData.names} 👋`);
+      window.location.href = window.routes[selectedRole][0];
+    })
 }
 
 const validarLogin = () => {
