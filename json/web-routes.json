@@ -25,6 +25,8 @@
         "user-info",
         "user-info.html",
         "create-group",
-        "create-group.html"
+        "create-group.html",
+        "group-info.html",
+        "group-info"
     ]
 }
