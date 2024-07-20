@@ -14,12 +14,10 @@
     <script src="../js/logout.js"></script>
     <script src="../js/validarLogin.js"></script>
     <script src="../js/validarRoles.js"></script>
-    <script src="../js/teachers.js"></script>
+    <script src="../js/teachers/teachers.js"></script>
 
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/modal.css">
-    <link rel="stylesheet" href="../css/students.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 
 </head>
 
@@ -37,28 +35,29 @@
             </div>
         </div>
     </nav>
-
-    <div class="welcome">
-        <div>
-            <h2 id="welcomeUser">
-                Bienvenido,
-            </h2>
+    <div class="container">
+        <div class="welcome">
+            <h2 id="welcomeUser" class="display-4">Bienvenido,</h2>
         </div>
     </div>
-    <div class="containerCards">
-        <div id="pCards">
-            <!-- Aqui van los cursos y estudiantes -->
-        </div>
-    </div>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            <h3>Lista de estudiantes</h3>
-            <div class="students-container">
-
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Información del grupo</h5>
             </div>
-        </div>
-    </div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Detalles del grupo</h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Nombre:</strong> Proyecto integrador</li>
+                <li class="list-group-item"><strong>ID del grupo:</strong> SIN_G6</li>
+                <li class="list-group-item"><strong>Día de la semana:</strong> Sábado</li>
+                <li class="list-group-item"><strong>Período:</strong> 2024-2</li>
+              </ul>
+              <a href="#" class="btn btn-primary mt-3">Ver más información del grupo</a>
+            </div>
+          </div>
+
+      </div>
 </body>
 
 </html>
