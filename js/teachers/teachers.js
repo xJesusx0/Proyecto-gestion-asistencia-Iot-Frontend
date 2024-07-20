@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cardBody.appendChild(infoContainer);
 
             const button = document.createElement('a');
-            button.href = `group-info.html?group_id=${group.id_grupo},module_id=${group.id_modulo},period=${group.periodo}`;
+            button.href = `group-info.html?group_id=${group.id_grupo}&module_id=${group.id_modulo}&period=${group.periodo}`;
             button.classList.add('btn', 'btn-primary');
             button.textContent = 'Ver más información del grupo';
             cardBody.appendChild(button);
