@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const url = `${config.baseUrl}/students/get-modules`;
   console.log(userData)
 
-  document.getElementById('btnDesplegable').innerHTML = userData['names']
+  //}} document.getElementById('btnDesplegable').innerHTML = userData['names']
 
   document.getElementById('welcomeUser').innerHTML += ` ${userData['names']} 🌟`
 
