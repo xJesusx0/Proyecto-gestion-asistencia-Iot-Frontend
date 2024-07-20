@@ -15,146 +15,35 @@
     <script src="../js/logout.js"></script>
     <script src="../js/validarLogin.js"></script>
     <script src="../js/validarRoles.js"></script>
-    <script src="../js/students/students.js"></script>
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .nav-item:hover{
-            cursor: pointer;
-        }
-
-        .nav-link {
-            color: #ffffff !important;
-        }
-
-        .footer {
-            background-color: #343a40;
-            color: #ffffff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        .footer h3 {
-            margin: 0.5rem 0;
-        }
-
-        .welcome {
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        .info-container {
-            margin-top: 1rem;
-            padding: 1rem;
-            background-color: #ffffff;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .justification-container {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .justification-button {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #007bff;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 0.25rem;
-            transition: background-color 0.3s;
-        }
-
-        .justification-button:hover {
-            background-color: #0056b3;
-        }
-
-        .cards-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            padding: 2rem 1rem;
-        }
-
-        .card {
-            width: 18rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 0.5rem;
-        }
-
-        .card-body {
-            padding: 1.25rem;
-        }
-
-        .card-title {
-            margin-bottom: 1rem;
-            color: #343a40;
-        }
-    </style>
+    <script src="../js/students/students.js"></script> 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-secondary">
+    <nav class=" navbar navbar-expand-lg bg-secondary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="../img/logoiubLetras.png" alt="LogoIUB" class="logoiub" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" id="btnDesplegable" href="#"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="logout()">Cerrar sesión</a>
-                    </li>
-                </ul>
-            </div>
+            
+            <img src="../img/logoiubLetras.png" alt="" class=" w-25 h-25">
+            <a class="nav-link" onclick="logout()" id="btnDesplegable" > <button class="btn btn-primary px-1 py-2" type="submit">Cerrar sesión</button> </a>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="welcome">
+    <div class="container d-flex flex-column justify-content-center">
+        <center>
+        <div class="container-fluid mt-4">
             <h2 id="welcomeUser" class="display-4">Bienvenido,</h2>
         </div>
+
         
-        <div class="justification-container">
-            <h4>¿Tienes inasistencias?, justifícalas aquí</h4>
-            <a class="justification-button" href="justificacion.html">Aquí</a>
-        </div>
+            <div class="container-fluid">
+                <a href="justificacion.html"><button class="btn btn-primary btn-block"> <h4>¿Tienes inasistencias?, justifícalas aquí</h4> </button> </a>       
+            </div>
+        </center>
+    </div>
         
         <div id="cards-container" class="cards-container row">
             <!-- Cards will be dynamically added here -->
         </div>
-    </div>
-
-    <footer class="footer bg-secondary">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="../img/logoiub.png" alt="Logo" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <h3>Jesús Perea</h3>
-                    <h3>Alberto Pérez</h3>
-                    <h3>Daniel Dussan</h3>
-                </div>
-                <div class="col-md-4">
-                    <h3>Contacto:</h3>
-                    <h3>Bienestar@unibarranquilla.edu.co</h3>
-                    <h3>Teléfono: +123456789</h3>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
