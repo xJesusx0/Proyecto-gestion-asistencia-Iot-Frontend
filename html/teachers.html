@@ -14,17 +14,14 @@
     <script src="../js/logout.js"></script>
     <script src="../js/validarLogin.js"></script>
     <script src="../js/validarRoles.js"></script>
-    <script src="../js/teachers.js"></script>
+    <script src="../js/teachers/teachers.js"></script>
 
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/modal.css">
-    <link rel="stylesheet" href="../css/students.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 
 </head>
 
 <body>
-
     <nav>
         <div>
             <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
@@ -37,27 +34,13 @@
             </div>
         </div>
     </nav>
-
-    <div class="welcome">
-        <div>
-            <h2 id="welcomeUser">
-                Bienvenido,
-            </h2>
+    <div class="container">
+        <div class="welcome">
+            <h2 id="welcomeUser" class="display-4">Bienvenido,</h2>
         </div>
     </div>
-    <div class="containerCards">
-        <div id="pCards">
-            <!-- Aqui van los cursos y estudiantes -->
-        </div>
-    </div>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            <h3>Lista de estudiantes</h3>
-            <div class="students-container">
-
-            </div>
-        </div>
+    <div class="container mt-5" id="cards-container">
+        <!-- Aqui van las card-->
     </div>
 </body>
 

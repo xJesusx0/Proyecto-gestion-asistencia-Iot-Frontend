@@ -4,7 +4,7 @@ const redirectToAttendancesList = (groupId) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const url = `${config.baseUrl}/students/get-modules`;
+  const url = `${config.baseUrl}/students/get-student-modules`;
   console.log(userData)
 
   //}} document.getElementById('btnDesplegable').innerHTML = userData['names']
