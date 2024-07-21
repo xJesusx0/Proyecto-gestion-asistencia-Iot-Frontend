@@ -41,5 +41,48 @@
             </div>
         </div>
     </nav>
+    <div class="container card-container">
+        <div class="card mb-4">
+            <div class="card-header">
+                Datos del Usuario
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Información</h5>
+                <p><strong>Id: </strong><span id="id-text"></span></p>
+                <form id="user-form">
+                    <div class="mb-3">
+                        <label for="nombres" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" name="nombres">
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="correo" name="correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono">
+                    </div>
+                    <input type="button" class="btn btn-primary" onclick="updateValues()" value="Actualizar datos">
+                </form>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                Roles del Usuario
+            </div>
+            <div id="roles" class="card-body">
+                
+            </div>
+        </div>
+
+        <div id="groups-container">
+            <h4 class="mb-3">Grupos del usuario</h4>
+    
+        </div>
+    </div>
 
 </body>
