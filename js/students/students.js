@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const url = `${config.baseUrl}/students/get-student-modules`;
   console.log(userData)
 
-  //}} document.getElementById('btnDesplegable').innerHTML = userData['names']
-
   document.getElementById('welcomeUser').innerHTML += ` ${userData['names']} 🌟`
 
   request('GET',url)
@@ -18,33 +16,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardContainer = document.getElementById('cards-container');
     
     response.forEach(module => {
+      const col = document.createElement('div');
+      col.classList.add('col-md-4','mt-3'); // Ajusta el tamaño de las columnas según sea necesario
+
       const card = document.createElement('div');
-      card.classList.add('card');
+      card.classList.add('card', 'h-100'); // 'h-100' para que las tarjetas tengan la misma altura
 
       const img = document.createElement('img');
-      img.classList.add('img-fluid');
-      img.setAttribute('src','../img/textura.jpg');
+      img.classList.add('card-img-top');
+      img.setAttribute('src', '../img/textura.jpg');
       card.appendChild(img);
-
-      const cardTitle = document.createElement('div');
-      cardTitle.classList.add('card-title');
-      cardTitle.innerHTML = module['nombre'];
-      card.appendChild(cardTitle);
 
       const cardBody = document.createElement('div');
       cardBody.classList.add('card-body');
-      cardBody.innerHTML = module['id_modulo']
-      card.appendChild(cardBody)
 
-      const button = document.createElement('input')
-      button.setAttribute('type','button');
-      button.setAttribute('value','Ver historial')
-      button.classList.add('btn')
-      button.classList.add('btn-primary')
-      card.appendChild(button)
+      const cardTitle = document.createElement('h5');
+      cardTitle.classList.add('card-title');
+      cardTitle.innerHTML = module['nombre'];
+      cardBody.appendChild(cardTitle);
 
-      cardContainer.appendChild(card)
-    });
+      const cardText = document.createElement('p');
+      cardText.classList.add('card-text');
+      cardText.innerHTML = `ID del módulo: ${module['id_modulo']}`;
+      cardBody.appendChild(cardText);
+
+      const button = document.createElement('a');
+      button.href = `history.html?group_id=${module.id_grupo}&module_id=${module.id_modulo}&period=${module.periodo}`;
+      //button.href = '#'
+      button.classList.add('btn', 'btn-primary');
+      button.textContent = 'Ver historial';
+      cardBody.appendChild(button);
+
+      card.appendChild(cardBody);
+      col.appendChild(card);
+      cardContainer.appendChild(col);
+  });
   })
 
 })
