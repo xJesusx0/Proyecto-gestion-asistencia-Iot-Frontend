@@ -22,17 +22,15 @@
 </head>
 
 <body>
-    <nav>
-        <div>
-            <img class="logoiub" src="../img/logoiubLetras.png" alt="LogoIUB">
-        </div>
+    <nav class=" navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid">
 
-        <div class="menuDesplegable">
-            <div class="dropdown-content">
-                <a onclick="logout()">Cerrar sesión</a>
-            </div>
+            <img src="../img/logoiubLetras.png" alt="" class=" w-25 h-25">
+            <a class="nav-link" onclick="logout()" id="btnDesplegable"> <button class="btn btn-primary px-1 py-2"
+                    type="submit">Cerrar sesión</button> </a>
         </div>
     </nav>
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-4">
