@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const studentsByGroup = () => {
     const url = `${config.baseUrl}/admin/count-students-by-group`;
     request('GET', url)
-    .then(response =>{
-        console.log(response)
-        console.log(response)
+        .then(response => {
+            console.log(response)
+            console.log(response)
             var labels = [];
             var values = [];
             response.forEach(element => {
@@ -31,7 +31,7 @@ const studentsByGroup = () => {
                 ],
 
             )
-    })
+        })
 }
 
 const weekdayAttendances = () => {
@@ -125,7 +125,7 @@ const circleChart = (labels, values) => {
         labels: labels,
         datasets: [{
             label: 'Cantidad de usuarios por rol',
-            backgroundColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)','rgba(75, 192, 192,1)'],
+            backgroundColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)', 'rgba(75, 192, 192,1)'],
             borderColor: 'white',
             borderWidth: 0.5,
             data: values
