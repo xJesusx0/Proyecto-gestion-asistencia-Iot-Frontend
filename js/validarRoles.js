@@ -1,4 +1,4 @@
-window.addEventListener('pageshow', function (event) {
+window.addEventListener('pageshow', (event) =>{
     const route = window.location.pathname.split('/').pop()
     const url = `${config.baseUrl}/auth/validate-role?url=${route}`
     request('GET',url)

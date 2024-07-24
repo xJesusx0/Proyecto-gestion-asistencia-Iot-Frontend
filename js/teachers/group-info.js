@@ -69,6 +69,12 @@ const getStudents = (groupId,moduleId,period) => {
             emailCell.innerHTML = user.correo;
             tableRow.appendChild(emailCell);
 
+            const button = document.createElement('a');
+            button.href = `history.html?group_id=${groupId}&module_id=${moduleId}&period=${period}`;
+            button.classList.add('btn', 'btn-primary');
+            button.textContent = 'Ver asistencias';
+            tableRow.appendChild(button);
+
             table.appendChild(tableRow);
         });
     });
