@@ -4,6 +4,7 @@ const config = {
     SECRET_TOKEN: '1234'
 };
 
-config.baseUrl = `http://${config.serverIp}:${config.serverPort}`;
+//config.baseUrl = `http://${config.serverIp}:${config.serverPort}`;
 //config.baseUrl = 'https://proyecto-gestion-asistencia-iot-backend.vercel.app'
 //https://proyecto-gestion-asistencia-iot-backend.vercel.app/auth/validate-login
+config.baseUrl = 'https://proyecto-gestion-asistencia-git-edc91a-jesus-projects-4267a868.vercel.app/'
