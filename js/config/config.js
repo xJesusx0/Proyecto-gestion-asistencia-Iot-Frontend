@@ -5,6 +5,6 @@ const config = {
 };
 
 //config.baseUrl = `http://${config.serverIp}:${config.serverPort}`;
-//config.baseUrl = 'https://proyecto-gestion-asistencia-iot-backend.vercel.app'
+config.baseUrl = 'https://proyecto-gestion-asistencia-iot-backend.vercel.app'
 //https://proyecto-gestion-asistencia-iot-backend.vercel.app/auth/validate-login
-config.baseUrl = 'https://proyecto-gestion-asistencia-git-edc91a-jesus-projects-4267a868.vercel.app/'
+//config.baseUrl = 'https://proyecto-gestion-asistencia-iot-backend-a36zbrk8j.vercel.app'
