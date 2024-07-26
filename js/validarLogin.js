@@ -8,6 +8,7 @@ window.addEventListener('pageshow', (event) => {
         const url = `${config.baseUrl}/auth/validate-login`
         request('GET',url)
         .then(response => {  
+
             let loggedIn = response['response'];
             console.log(loggedIn)
             if (loggedIn !== true) {
@@ -16,9 +17,13 @@ window.addEventListener('pageshow', (event) => {
             }
             console.log(loggedIn)
         })
-        
+        .catch(error =>{
+            console.log(error)
+            alert('Ha ocurrido un error con el web token');
+            localStorage.clear();
+            window.location.href = 'login.html';
 
-   
+        })
 });
 
 
