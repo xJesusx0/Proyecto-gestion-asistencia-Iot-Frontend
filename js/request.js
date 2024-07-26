@@ -1,15 +1,15 @@
 const request = async (method, url, data = null) => {
-    const token = config.SECRET_TOKEN;
+    const token = localStorage.getItem('access_token');
+    //console.log(token)
     const headers = {
         'Content-Type': 'application/json',
-        'token': token
+        'Authorization': `Bearer ${token}`
     };
 
     const requestOptions = {
         url: url,
         method: method,
         headers: headers,
-        withCredentials: true
     };
 
     if (method !== 'GET' && data) {

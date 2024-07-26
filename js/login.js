@@ -35,6 +35,9 @@ const confirmRole = () => {
         alert('Ha ocurrido un error al iniciar sesion');
         return;
       }
+
+      localStorage.setItem('access_token', response.access_token);
+
       alert(`Bienvenido de nuevo, ${userData.names} 👋`);
       window.location.href = window.routes[selectedRole][0];
     })
@@ -59,7 +62,9 @@ const validarLogin = () => {
 
   request('POST', url, data)
     .then(data => {
-      console.log('Respuesta del servidor:', data);
+      console.log(data);
+
+      localStorage.setItem('access_token', data.access_token);
 
       if (data['error']) {
         alert(data['error']);
@@ -88,7 +93,7 @@ const validarLogin = () => {
 
         });
 
-        showModal()
+        showModal();
 
         const userData = {
           'names': data['user-data']['nombres'],
