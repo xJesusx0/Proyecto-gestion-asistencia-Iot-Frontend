@@ -74,6 +74,7 @@ const createGroup = () => {
 
     request('POST',url,data)
     .then(response => {
+        alert(response.response)
         console.log(response)
     })
 }
