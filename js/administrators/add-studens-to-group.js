@@ -34,6 +34,10 @@ const addStudentsToGroup = () => {
     const url = `${config.baseUrl}/admin/add-students-to-group`;
     request('POST',url,data)
     .then(response => {
+        if (response.success){
+            alert('Operacion realizada correctamente');
+            window.location.href = 'groups.html'
+        }
         console.log(response)
     })
 
