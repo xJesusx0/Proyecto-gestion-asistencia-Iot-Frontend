@@ -1,4 +1,22 @@
+const getUrlParams = () => {
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams(url.search);
+
+    const groupId = params.get('group_id');
+    const moduleId = params.get('module_id');
+    const period = params.get('period');
+
+    const data = {
+        'groupId':groupId,
+        'moduleId':moduleId,
+        'period':period
+    }
+    return data;
+}
+
+
 const addStudentsToGroup = () => {
+    const urlParams =getUrlParams()
 
     const selectedStudents = [];
     const checkboxes = document.querySelectorAll('#cards-container input[type="checkbox"]:checked');
@@ -7,17 +25,26 @@ const addStudentsToGroup = () => {
     });
 
     console.log(selectedStudents)
+    
+    const data = {
+        'group_info':urlParams,
+        'students':selectedStudents
+    }
 
+    const url = `${config.baseUrl}/admin/add-students-to-group`;
+    request('POST',url,data)
+    .then(response => {
+        console.log(response)
+    })
 
 };
 
 const getStudentsNotInGroup = () => {
-    const url = new URL(window.location.href);
-    const params = new URLSearchParams(url.search);
-
-    const groupId = params.get('group_id');
-    const moduleId = params.get('module_id');
-    const period = params.get('period');
+    const urlParams =getUrlParams()
+    
+    const groupId = urlParams.groupId;
+    const moduleId = urlParams.moduleId;
+    const period = urlParams.period;
 
     console.log("Group ID:", groupId);
     console.log("Module ID:", moduleId);
