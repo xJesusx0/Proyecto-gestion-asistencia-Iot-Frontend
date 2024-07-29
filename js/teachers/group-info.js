@@ -70,10 +70,12 @@ const getStudents = (groupId,moduleId,period) => {
             tableRow.appendChild(emailCell);
 
             const button = document.createElement('a');
-            button.href = `history.html?group_id=${groupId}&module_id=${moduleId}&period=${period}`;
-            button.classList.add('btn', 'btn-primary');
+            button.href = `history.html?student_id=${user.id_usuario}&group_id=${groupId}&module_id=${moduleId}&period=${period}`;
+            button.classList.add('btn', 'btn-secondary');
             button.textContent = 'Ver asistencias';
+            button.setAttribute('role', 'button'); 
             tableRow.appendChild(button);
+            
 
             table.appendChild(tableRow);
         });

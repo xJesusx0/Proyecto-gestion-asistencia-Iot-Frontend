@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const groupId = params.get('group_id');
     const moduleId = params.get('module_id');
     const period = params.get('period');
-
-    const _url = `${config.baseUrl}/students/get-student-attendances-by-group?group_id=${groupId}&module_id=${moduleId}&period=${period}`
+    const studentId = params.get('student_id')
+    console.log(studentId)
+    const _url = `${config.baseUrl}/students/get-student-attendances-by-group?student_id=${studentId}&group_id=${groupId}&module_id=${moduleId}&period=${period}`
     request('GET',_url)
     .then(response => {
         console.log(response)
