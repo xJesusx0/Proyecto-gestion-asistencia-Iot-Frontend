@@ -15,8 +15,13 @@ const sendFile = () => {
 
     formData.append('csvFile', fileField.files[0]);
     formData.append('table',selectedTable)
+
+    const token = localStorage.getItem('access_token')
+
     fetch(url, {
-        headers: {'Authorization': `Bearer ${config.SECRET_TOKEN}`},
+        headers: {
+        'Authorization': `Bearer ${token}`
+    },
         method: 'POST',
         body: formData
     })
