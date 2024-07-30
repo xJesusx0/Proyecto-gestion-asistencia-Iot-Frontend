@@ -18,8 +18,7 @@ const sendFile = () => {
     fetch(url, {
         headers: {'Authorization': `Bearer ${config.SECRET_TOKEN}`},
         method: 'POST',
-        body: formData,
-        credentials: 'include'
+        body: formData
     })
     .then(response => response.json())
     .then(data => {
