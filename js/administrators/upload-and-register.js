@@ -16,7 +16,7 @@ const sendFile = () => {
     formData.append('csvFile', fileField.files[0]);
     formData.append('table',selectedTable)
     fetch(url, {
-        headers: {'Authorization': `Bearer ${config.SECRET_TOKEN}}',
+        headers: {'Authorization': `Bearer ${config.SECRET_TOKEN}`},
         method: 'POST',
         body: formData,
         credentials: 'include'
