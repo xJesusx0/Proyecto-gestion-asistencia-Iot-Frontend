@@ -73,3 +73,22 @@ const setAttendance = () =>{
 
 }
 
+const setFail = () => {
+    console.log('Hola');
+
+    const url = `${config.baseUrl}/teachers/set-group-fails`;
+    const groupInfo = getUrlParams();
+    
+    const data = {
+        'group_info':groupInfo
+    }
+
+    console.log(groupInfo) 
+    request('POST',url,data)
+    .then(response => {
+        if(response.response == 'ok'){
+            alert('Operacion realizada correctamente')
+        }
+        console.log(response)
+    })
+}
