@@ -21,7 +21,7 @@ const request = async (method, url, data = null) => {
         return response.data;
     } catch (error) {
         if (error.response) {
-            alert(error.response.data.error)
+        //    alert(error.response.data.error)
             console.error(error.response.data)
             throw new Error(`Error ${error.response.status}`);
         } else if (error.request) {

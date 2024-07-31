@@ -41,23 +41,14 @@
 
                 <form id="login-form" class="formulario" method="post">
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Motivo de inasistencia</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="message" class="form-label">Motivo de inasistencia</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
                     </div>
 
                     <label for="inasistencia">Inasistencia:</label><br>
-                    <select id="inasistencia" name="inasistencia" class="form-select mb-3">
+                    <select id="fails-container" name="inasistencia" class="form-select mb-3">
                         <option value="">Seleccione la inasistencia</option>
                         <!-- Aquí van las inasistencias -->
-                    </select>
-
-                    <label for="tipo">Tipo de Inasistencia:</label><br>
-                    <select id="tipo" name="tipo" class="form-select mb-3">
-                        <option value="">Seleccione el tipo de inasistencia</option>
-                        <option value="accidente">Accidente</option>
-                        <option value="muerte_familiar">Muerte de un familiar</option>
-                        <option value="cita_medica">Cita médica</option>
-                        <option value="otra">Otra</option>
                     </select>
 
                     <div class="mb-3">
