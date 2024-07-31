@@ -34,9 +34,45 @@
             </div>
         </div>
     </nav>
-    
 
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4" id="info-clase">
+                    <div class="card-header">
+                        Información de la Clase
+                    </div>
+                    <div class="card-body">
+                        <!-- Contenido dinámico aquí -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4" id="datos-grupo">
+                    <div class="card-header">
+                        Datos del Grupo
+                    </div>
+                    <div class="card-body">
+                        <!-- Contenido dinámico aquí -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4" id="info-adicional">
+                    <div class="card-header">
+                        Información Adicional
+                    </div>
+                    <div class="card-body">
+                        <!-- Contenido dinámico aquí -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
     <div class="container mt-4">
+        <h1>Historial de asistencias</h1>
         <table class="table table-striped table-hover">
             <thead class="thead-dark">
                 <tr>
@@ -51,7 +87,23 @@
             </tbody>
         </table>
     </div>
-    
+    <div class="container mt-5">
+        <h1>Lista de inasistencias</h1>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Grupo</th>
+                    <th>Materia</th>
+                    <th>Fecha</th>
+            
+                </tr>
+            </thead>
+            <tbody id="fails-table-body">
+                <!-- Aquí se generan las demás filas -->
+            </tbody>
+        </table>
+    </div>
 
 </body>
+
 </html>
