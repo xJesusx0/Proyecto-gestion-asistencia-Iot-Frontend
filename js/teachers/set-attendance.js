@@ -21,11 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = getUrlParams();
 
     getStudents(urlParams.group_id,urlParams.module_id,urlParams.period);
+
+    getAttendances(urlParams.group_id,urlParams.module_id,urlParams.period)
 }); 
 
 
 const getStudents = (groupId,moduleId,period) => {
-    const url = `${config.baseUrl}/teachers/get-students-by-group?group_id=${groupId}&module_id=${moduleId}&period=${period}`
+    const url = `${config.baseUrl}/teachers/get-students-without-attendance-by-group?group_id=${groupId}&module_id=${moduleId}&period=${period}`
     request('GET',url)
     .then(response => {
         console.log(response)
@@ -68,9 +70,9 @@ const setAttendance = () =>{
     }
     request('POST',url,data)
     .then(response => {
+        console.log(response) 
        alert('Operacion realizada correctamente') 
-    })
-
+    }) 
 }
 
 const setFail = () => {
@@ -92,3 +94,35 @@ const setFail = () => {
         console.log(response)
     })
 }
+
+const getAttendances = (groupId,moduleId,period) => {
+
+    const _url = `${config.baseUrl}/teachers/get-day-attendances?group_id=${groupId}&module_id=${moduleId}&period=${period}`
+    request('GET',_url)
+    .then(response => {
+        console.log(response)
+        const tableBody = document.getElementById('table-body')
+        response.forEach(attendance => {
+            const row = document.createElement('tr')
+    
+            const idCell = document.createElement('td')
+            idCell.textContent = attendance.id_estudiante
+            row.appendChild(idCell)
+    
+            const nameCell = document.createElement('td')
+            nameCell.textContent = attendance.nombres
+            row.appendChild(nameCell)
+    
+            const lastnameCell = document.createElement('td')
+            lastnameCell.textContent = attendance.apellidos
+            row.appendChild(lastnameCell)
+    
+            const timeCell = document.createElement('td')
+            timeCell.textContent = attendance.hora_llegada
+            row.appendChild(timeCell)
+    
+            tableBody.appendChild(row)
+        });
+    })
+}
+
