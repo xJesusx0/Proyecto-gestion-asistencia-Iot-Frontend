@@ -12,7 +12,7 @@ window.addEventListener('pageshow', (event) => {
             let loggedIn = response['response'];
             console.log(loggedIn)
             if (loggedIn !== true) {
-                localStorage.removeItem('userData');
+                localStorage.clear();
                 window.location.href = 'login.html';
             }
             console.log(loggedIn)
