@@ -19,7 +19,7 @@ window.addEventListener('pageshow', (event) => {
         })
         .catch(error =>{
             console.log(error)
-            alert('Ha ocurrido un error con el web token');
+            alert('Ha expirado el web token, inicie sesion denuevo');
             localStorage.clear();
             window.location.href = 'login.html';
 

@@ -50,9 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const attendancesButton = document.createElement('a');
             attendancesButton.href = `set-attendance.html?group_id=${group.id_grupo}&module_id=${group.id_modulo}&period=${group.periodo}`;
-            attendancesButton.classList.add('btn', 'btn-primary');
+            attendancesButton.classList.add('btn', 'btn-primary','me-4');
             attendancesButton.textContent = 'Gestionar asistencias';
             cardBody.appendChild(attendancesButton);
+
+            const justificationsButton = document.createElement('a');
+            justificationsButton.href = `fails.html?group_id=${group.id_grupo}&module_id=${group.id_modulo}&period=${group.periodo}`;
+            justificationsButton.classList.add('btn', 'btn-primary');
+            justificationsButton.textContent = 'Ver justificaciones';
+            cardBody.appendChild(justificationsButton);
 
             card.appendChild(cardBody);
 
