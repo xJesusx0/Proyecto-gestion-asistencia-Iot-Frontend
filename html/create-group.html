@@ -33,22 +33,58 @@
 </head>
 
 <body>
-    <nav class=" navbar navbar-expand-lg bg-secondary">
+    <nav class="navbar bg-body-tertiary ">
         <div class="container-fluid">
+            <img src="../img/logoiubLetras.png"  style="width: 200px; height: 50px;">
+            <button class="navbar-toggler border border-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">|||</span>
+            </button>
 
-            <img src="../img/logoiubLetras.png" alt="" class=" w-25 h-25">
-            <a class="nav-link" onclick="logout()" id="btnDesplegable"> <button class="btn btn-primary px-1 py-2"
-                    type="submit">Cerrar sesión</button> </a>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <img src="../img/logoiubLetras.png"  style="width: 200px; height: 50px;">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="administrators.html">
+                                <button class="btn btn-primary btn-lg" style="width: 350px;"  type="button">Inicio</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="upload-and-register.html">
+                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Agregar Usuario Via Archivo CSV</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="users-list.html">
+                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Ver lista de usuario</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="groups.html">
+                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Ver grupos</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="logout()" id="btnDesplegable">
+                                <button class="btn btn-danger btn-lg px-1 py-2" style="width: 350px;" type="button">Cerrar sesión</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </nav> 
-
-    <div class="d-flex justify-content-around mt-4">      
-        <a href="upload-and-register.html"><button type="button" class="btn btn-info">Agregar usuarios via archivo CSV</button></a>
-        <a href="users-list.html"><button type="button" class="btn btn-info">Ver lista de usuarios</button></a>
-        <a href="create-group.html"> <button type="button" class="btn btn-info">Crear un grupo</button></a>
-    </div>
+    </nav>
     
-    <div class="container mt-5">
+    <div class="container mt-0">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -117,31 +153,6 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer mt-4 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="logo-container text-center">
-                        <img src="../img/logoiub.png" alt="Logo">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="names-container">
-                        <h3>Jesus Perea</h3>
-                        <h3>Alberto Perez</h3>
-                        <h3>Daniel Dussan</h3>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="contact-container">
-                        <h3>Contacto: </h3>
-                        <h3>Bienestar@unibarranquilla.edu.co</h3>
-                        <h3>Teléfono: +123456789</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
 </body>
 

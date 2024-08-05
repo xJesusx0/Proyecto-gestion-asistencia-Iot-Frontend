@@ -24,21 +24,56 @@
 </head>
 
 <body>
-    <nav class=" navbar navbar-expand-lg bg-secondary">
+    <nav class="navbar bg-body-tertiary ">
         <div class="container-fluid">
+            <img src="../img/logoiubLetras.png"  style="width: 200px; height: 50px;">
+                        <button class="navbar-toggler border border-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">|||</span>
+            </button>
 
-            <img src="../img/logoiubLetras.png" alt="" class=" w-25 h-25">
-            <a class="nav-link" onclick="logout()" id="btnDesplegable"> <button class="btn btn-primary px-1 py-2"
-                    type="submit">Cerrar sesión</button> </a>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <img src="../img/logoiubLetras.png"  style="width: 200px; height: 50px;">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="upload-and-register.html">
+                                <button class="btn btn-primary btn-lg" style="width: 350px;"  type="button">Agregar usuarios via archivo CSV</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="users-list.html">
+                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Ver lista de usuarios</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="create-group.html">
+                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Crear un grupo</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="groups.html">
+                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Ver grupos</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="logout()" id="btnDesplegable">
+                                <button class="btn btn-danger btn-lg px-1 py-2" style="width: 350px;" type="button">Cerrar sesión</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </nav> 
-
-    <div class="d-flex justify-content-around mt-4">      
-        <a href="upload-and-register.html"><button type="button" class="btn btn-info">Agregar usuarios via archivo CSV</button></a>
-        <a href="users-list.html"><button type="button" class="btn btn-info">Ver lista de usuarios</button></a>
-        <a href="create-group.html"> <button type="button" class="btn btn-info">Crear un grupo</button></a>
-        <a href="groups.html"> <button type="button" class="btn btn-info">Ver grupos</button></a>
-    </div>
+    </nav>
 
     <div class="container">
         <div class="text-center mt-4">
