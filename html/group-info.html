@@ -17,6 +17,7 @@
  
  
     <script src="../js/teachers/group-info.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
@@ -63,11 +64,11 @@
         </div>
     </div>
     <div class="container mt-5">
-        <h2>Lista de estudiantes</h2>
         <div class="table-responsive">
             <table class="table table-striped table-hover">
-                <thead class="bg-dark text-light">
-                    <tr>
+                <thead class="table-dark">
+                    <h3 class="fw-bold mt-1 text-center">Lista de Estudiantes</h3>
+                    <tr class="text-center">
                         <th>Identificación</th>
                         <th>Nombres</th>
                         <th>Apellidos</th>
@@ -75,7 +76,7 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="table-body">
+                <tbody id="table-body" class="text-center">
                     <!-- Aqui van las filas generadas-->
                 </tbody>
             </table>

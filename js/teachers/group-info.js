@@ -71,7 +71,7 @@ const getStudents = (groupId,moduleId,period) => {
 
             const button = document.createElement('a');
             button.href = `history.html?student_id=${user.id_usuario}&group_id=${groupId}&module_id=${moduleId}&period=${period}`;
-            button.classList.add('btn', 'btn-secondary');
+            button.classList.add('btn', 'btn-warning','mt-2');
             button.textContent = 'Ver asistencias';
             button.setAttribute('role', 'button'); 
             tableRow.appendChild(button);
