@@ -10,8 +10,15 @@
     "profesor": [
         "teachers.html",
         "teachers",
+        "history",
+        "history.html",
         "group-info.html",
-        "group-info"
+        "group-info",
+        "set-attendance.html",
+        "set-attendance",
+        "fails.html",
+        "fails"
+
     ],
     "administrador": [
         "administrators.html",
@@ -26,7 +33,13 @@
         "user-info.html",
         "create-group",
         "create-group.html",
+        "history",
+        "history.html",
         "group-info.html",
-        "group-info"
+        "group-info",
+        "add-students-to-group.html",
+        "add-students-to-group",
+        "groups.html",
+        "groups"
     ]
 }
