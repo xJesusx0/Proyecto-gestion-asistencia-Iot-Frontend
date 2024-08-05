@@ -6,7 +6,15 @@ window.addEventListener('pageshow', function (event) {
 
     if (userData && userData.loggedIn === 'true') {
       let role = userData.role;
-      window.location.href = window.routes[role][0];
+      fetch('../json/web-routes.json')
+      .then(response => {
+          return response.json();
+      })
+      .then(data => {
+          console.log(data)
+          window.routes = data;
+          window.location.href = window.routes[role][0];
+      }) 
     }
 
     const loginForm = document.getElementById('login-form');
