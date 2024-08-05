@@ -8,73 +8,24 @@
 
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <script src="../bootstrap/js/bootstrap.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/request.js"></script>
     <script src="../js/getUserData.js"></script>
     <script src="../js/config/config.js"></script>
     <script src="../js/config/routes.js"></script>
+    <script src="../js/nav.js"></script>
     <script src="../js/logout.js"></script>
     <script src="../js/validarLogin.js"></script>
     <script src="../js/validarRoles.js"></script>
+ 
     <script src="../js/administrators/upload-and-register.js"></script> <!-- Aquí vinculas el script -->
 
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary ">
-        <div class="container-fluid">
-            <img src="../img/logoiubLetras.png"  style="width: 200px; height: 50px;">
-                        <button class="navbar-toggler border border-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">|||</span>
-            </button>
+   <div id="nav-container">
 
-
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <img src="../img/logoiubLetras.png"  style="width: 200px; height: 50px;">
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="administrators.html">
-                                <button class="btn btn-primary btn-lg" style="width: 350px;"  type="button">Inicio</button>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="users-list.html">
-                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Ver lista de usuarios</button>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="create-group.html">
-                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Crear un grupo</button>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="groups.html">
-                                <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Ver grupos</button>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="logout()" id="btnDesplegable">
-                                <button class="btn btn-danger btn-lg px-1 py-2" style="width: 350px;" type="button">Cerrar sesión</button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    
-    </div>
+   </div> 
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
