@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: 'Nombre', value: group.nombre },
                 { label: 'ID del grupo', value: group.id_grupo },
                 { label: 'Día de la semana', value: group.dia_semana },
-                { label: 'Período', value: group.periodo }
+                { label: 'Período', value: group.periodo },
+                { label: 'Horario', value: `${group.hora_inicio} - ${group.hora_fin}`}
             ];
 
             details.forEach(detail => {
