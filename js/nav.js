@@ -79,9 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             <a class="nav-link" href="teachers.html">
                                 <button class="btn btn-primary btn-lg px-1 py-2" style="width: 350px;" type="button">Inicio</button>
                             </a>
+                    </li>
+                         <li class="nav-item">
+                            <a class="nav-link" onclick="logout()" id="btnDesplegable">
+                                <button class="btn btn-danger btn-lg px-1 py-2" style="width: 350px;" type="button">Cerrar sesión</button>
+                            </a>
                         </li>
-<li class="nav-item">
-                           
+  
                 </div>
             </div>
         </div>
