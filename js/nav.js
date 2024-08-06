@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 `;
 
     const teacherNav = `
-   <nav class="navbar bg-body-tertiary fixed-top">
+   <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
         <!-- Logo visible en la barra de navegación -->
         <img src="../img/logoiubLetras.png" style="width: 200px; height: 50px;">
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const studentNav = `
-<nav class="navbar bg-body-tertiary fixed-top mb-5">
+<nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
         <!-- Logo visible en la barra de navegación -->
         <img src="../img/logoiubLetras.png" style="width: 200px; height: 50px;">

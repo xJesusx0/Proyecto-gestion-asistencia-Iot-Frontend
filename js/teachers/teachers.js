@@ -45,19 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const button = document.createElement('a');
             button.href = `group-info.html?group_id=${group.id_grupo}&module_id=${group.id_modulo}&period=${group.periodo}`;
-            button.classList.add('btn', 'btn-primary','me-4');
+            button.classList.add('btn', 'btn-primary','me-3','mb-2');
             button.textContent = 'Ver más información del grupo';
             cardBody.appendChild(button);
 
             const attendancesButton = document.createElement('a');
             attendancesButton.href = `set-attendance.html?group_id=${group.id_grupo}&module_id=${group.id_modulo}&period=${group.periodo}`;
-            attendancesButton.classList.add('btn', 'btn-primary','me-4');
+            attendancesButton.classList.add('btn', 'btn-primary','me-3','mb-2');
             attendancesButton.textContent = 'Gestionar asistencias';
             cardBody.appendChild(attendancesButton);
 
             const justificationsButton = document.createElement('a');
             justificationsButton.href = `fails.html?group_id=${group.id_grupo}&module_id=${group.id_modulo}&period=${group.periodo}`;
-            justificationsButton.classList.add('btn', 'btn-primary');
+            justificationsButton.classList.add('btn', 'btn-primary','mb-2');
             justificationsButton.textContent = 'Ver justificaciones';
             cardBody.appendChild(justificationsButton);
 
