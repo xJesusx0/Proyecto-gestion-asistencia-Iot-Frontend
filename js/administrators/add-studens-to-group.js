@@ -63,28 +63,27 @@ const getStudentsNotInGroup = () => {
 };
 
 const generateCards = (data) => {
-    const container = document.getElementById('cards-container');
-    container.innerHTML = '';
+    const row = document.getElementById('cards-row');
+    row.innerHTML = ''; // Limpiar el contenido actual
 
     data.forEach(item => {
-        
         const card = document.createElement('div');
-        card.className = 'col-md-4 mb-4';
+        card.className = 'col-md-4 mb-4'; // Cada tarjeta ocupa 4 columnas
         card.innerHTML = `
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">${item.nombres} ${item.apellidos}</h5>
-                            <p class="card-text">ID: ${item.id_estudiante}</p>
-                            <div class="form-check card-checkbox">
-                                <input class="form-check-input" value="${item.id_estudiante}" type="checkbox" id="check-${item.id_estudiante}">
-                                <label class="form-check-label" for="check-${item.id_estudiante}">
-                                    Agregar al grupo
-                                </label>
-                            </div>
-                        </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${item.nombres} ${item.apellidos}</h5>
+                    <p class="card-text">ID: ${item.id_estudiante}</p>
+                    <div class="form-check card-checkbox">
+                        <input class="form-check-input" value="${item.id_estudiante}" type="checkbox" id="check-${item.id_estudiante}">
+                        <label class="form-check-label" for="check-${item.id_estudiante}">
+                            Agregar al grupo
+                        </label>
                     </div>
-                `;
-        container.appendChild(card);
+                </div>
+            </div>
+        `;
+        row.appendChild(card);
     });
 }
 
