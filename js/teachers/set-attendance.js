@@ -71,7 +71,8 @@ const setAttendance = () =>{
     request('POST',url,data)
     .then(response => {
         console.log(response) 
-       alert('Operacion realizada correctamente') 
+       alert('Operacion realizada correctamente')
+       window.location.reload(); 
     }) 
 }
 
@@ -91,9 +92,45 @@ const setFail = () => {
         if(response.response == 'ok'){
             alert('Operacion realizada correctamente')
         }
+        window.location.reload();
         console.log(response)
     })
 }
+
+const getReport = async () => {
+    try {
+        const groupInfo = getUrlParams(); 
+        const url = `${config.baseUrl}/teachers/generate-report`;
+        const token = localStorage.getItem('access_token');
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(groupInfo)
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const blob = await response.blob();
+        const filename = 'report.csv'; 
+
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+    } catch (error) {
+        console.error('Error fetching report:', error);
+    }
+};
+
 
 const getAttendances = (groupId,moduleId,period) => {
 
