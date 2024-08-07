@@ -34,7 +34,7 @@ const getFails = (groupId, moduleId, period) => {
 
                 card.innerHTML = `
                 <div class="card">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header bg-secondary text-white">
                         Información de la inasistencia
                     </div>
                     <div class="card-body">
@@ -47,8 +47,8 @@ const getFails = (groupId, moduleId, period) => {
                         <p class="card-text"><strong>Justificada:</strong> ${data.justificada === 0 ? 'no' : 'sí'}</p>
                         <p class="card-text"><strong>Aprobada:</strong> ${data.aprobada === 0 ? 'no' : 'sí'}</p>
                         <p class="card-text"><strong>Período:</strong> ${data.periodo}</p>
-                        <button class="btn btn-success" onclick="approveJustification(${data.id_estudiante}, '${data.id_grupo}', '${data.id_modulo}', '${data.periodo}', '${data.fecha}')">Aprobar justificación</button>
-                        <button class="btn btn-info" onclick = "getJustificationUrl(${data.id_estudiante}, '${data.id_grupo}', '${data.id_modulo}', '${data.periodo}', '${data.fecha}')">Ver Justificante</button>
+                        <button class="btn btn-success me-2 mb-2" onclick="approveJustification(${data.id_estudiante}, '${data.id_grupo}', '${data.id_modulo}', '${data.periodo}', '${data.fecha}')">Aprobar justificación</button>
+                        <button class="btn btn-secondary" onclick = "getJustificationUrl(${data.id_estudiante}, '${data.id_grupo}', '${data.id_modulo}', '${data.periodo}', '${data.fecha}')">Ver Justificante</button>
                     </div>
                 </div>
             `;
@@ -87,19 +87,18 @@ const getJustificationUrl = (studentId,groupId,moduleId,period,date) => {
     .then(response => {
         console.log(response)
         
-        const path = response.url;
+        const path = response.ruta_archivo;
         
         const modifiedPath = path.slice(1);
         console.log(modifiedPath)
-        
+        document.getElementById('modal-body').innerHTML += response.descripcion;
+          
+        const modalElement = document.getElementById('modal');
+        const modal = new bootstrap.Modal(modalElement);
+        modal.show();
         downloadFile(modifiedPath) 
-        //downloadFile('1235,SIN_G3,COM25,2024-2,2024-07-31.jpeg');
     
     })
-
-
-    //const url = `${config.baseUrl}/download/${filename}`;
-    //window.location.href = url;  // Redirige al usuario para descargar el archivo
 }
 
 const downloadFile = async (filename) => {
@@ -107,7 +106,6 @@ const downloadFile = async (filename) => {
         const token = localStorage.getItem('access_token')
         const url = `${config.baseUrl}/teachers/download/${filename}`;
         
-        // Realiza la solicitud de descarga
         const response = await fetch(url, {
             method: 'GET',
             headers: {

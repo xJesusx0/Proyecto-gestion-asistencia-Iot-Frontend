@@ -11,6 +11,7 @@
     <script src="../js/config/config.js"></script>
     <script src="../js/config/routes.js"></script>
     <script src="../js/nav.js"></script>
+    <script src="../js/modal.js"></script>
     <script src="../js/logout.js"></script>
     <script src="../js/validarLogin.js"></script>
     <script src="../js/validarRoles.js"></script>
@@ -29,16 +30,30 @@
     <div id="nav-container">
 
     </div>
-    <div class="container d-flex flex-column justify-content-center mt-5 pt-4">
-        <div class="row">
-        <div id="card-container"></div>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">Información de la Inasistencia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modal-body" class="modal-body">    
+                <h5 class="text-bg-light bg-info">
+                    Se esta descargando el archivo...
+                </h5>
+                <h4>Mensaje del estudiante</h4>
+            </div> 
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
         </div>
+      </div>
+    <div class="container d-flex flex-column justify-content-center mt-5 pt-4">
+        <div id="card-container" class="row">
+        </div>  
     </div>
 
-   <div class="container">
-        <div id="fails-container">
-
-        </div>
-   </div> 
 </body>
 </html>
