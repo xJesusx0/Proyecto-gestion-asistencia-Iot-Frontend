@@ -48,7 +48,7 @@ const getStudents = (groupId,moduleId,period) => {
     
             const label = document.createElement('label');
             label.setAttribute('for', checkbox.id);
-            label.innerHTML = 'Seleccionar';
+            label.innerHTML = ' -Seleccionar';
     
             studentContainer.appendChild(checkbox);
             studentContainer.appendChild(label);
